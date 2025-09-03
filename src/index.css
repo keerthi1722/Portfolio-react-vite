@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables to keep palette tight */
+:root {
+  --bg: #ffffff;
+  --text: #0b1437;
+  --accent: #14b8a6;
+}
+
+.dark :root {
+  --bg: #0b1437;
+  --text: #ffffff;
+  --accent: #14b8a6;
+}
+
+html, body, #root { height: 100%; }
+
+/* Reusable utilities */
+.container-px { @apply px-4 sm:px-6 lg:px-10; }
+.section-y { @apply py-16 sm:py-20; }
+.card { @apply rounded-2xl bg-white text-navy-700 dark:bg-navy-700/40 dark:text-white shadow-soft border border-white/30 dark:border-white/10; }
+.btn { @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 font-medium shadow-soft border border-transparent transition; }
+.btn-primary { @apply bg-teal-500 text-white hover:bg-teal-600; }
+.btn-ghost { @apply bg-white text-navy-700 hover:bg-teal-50 border-teal-100; }
+.badge { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-teal-100 text-teal-700 dark:bg-teal-600/30 dark:text-teal-200; }
